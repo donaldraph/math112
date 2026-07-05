@@ -368,3 +368,37 @@ $$\text{MPC} = \frac{dC}{dY}, \qquad \text{MPS} = \frac{dS}{dY}, \qquad \text{MP
 
 ---
 
+## Exam Tricks — where marks are actually lost
+
+**Rate & period conversion (the #1 error).** "Compounded quarterly/semi-annually/monthly" means you must convert *both*: rate per period = annual rate ÷ frequency, and $n$ = years × frequency. A 5-year 8% quarterly problem is $r = 2$, $n = 20$ — never $r = 8$, $n = 5$.
+
+**$s$ vs. $a$ (accumulation vs. present value).** Saving up to a future target → $s_{\overline{n}|r}$ (future value). Paying off / valuing a stream today → $a_{\overline{n}|r}$ (present value). Bonds and sinking funds punish the mix-up hardest.
+
+**Bond rate vs. yield rate.** Coupon $d$ = **bond** rate × face. Every discount factor ($R^{-n}$, $a_{\overline{n}|r}$) uses the **yield** rate. Bond rate > yield → premium (price above redemption); bond rate < yield → discount. If your premium/discount sign is backwards, you've swapped the rates.
+
+**Which discount world?** Short-term notes → simple-interest discount (true or banker's — and *banker's is always the larger* because it charges on the maturity value, not the present value). Long-term/compound → $p = AR^{-n}$. Don't apply $AR^{-n}$ to a 90-day note.
+
+**360 vs. 365 days.** Ordinary/banker's interest uses 360; exact uses 365. The problem's wording tells you which — read it.
+
+**Depreciation method ↔ scrap value.**
+- Linear & sum-of-years'-digits: depreciate $(p - s)$.
+- Double-declining-balance: **ignore** scrap; rate $= 2/n$ on book value.
+- Fixed-rate: use scrap only to *solve for the rate*, then apply to book value.
+
+**Sign errors in elasticity.** $\dfrac{dq}{dp}$ is negative for normal demand, so $e$ is negative; judge elasticity by $|e|$ vs. 1. Don't drop the sign, but don't call inelastic demand "elastic" because you forgot to compare magnitudes.
+
+**Second-order check in optimization.** Setting the first derivative to zero only finds a *stationary* point. State the sufficient condition ($\pi'' < 0$ for a max) — it's often worth marks on its own.
+
+**MPC + MPS = 1.** Free check and a fast way to recover the other propensity.
+
+**Rounding.** Carry the table factors ($s$, $a$, $R^{-n}$) to their full listed precision (6 decimals in this book) until the final line; rounding early throws bond prices and schedules off by dollars.
+
+### Suggested study order
+
+1. **Compound interest** ($A = pR^n$, present value) — the foundation of everything else.
+2. **The two annuity factors** ($s_{\overline{n}|r}$, $a_{\overline{n}|r}$) — memorize both forms and *when* each applies.
+3. **Simple interest & discounting** (true vs. banker's, promissory notes) — self-contained, quick marks.
+4. **Amortization & sinking funds** — direct application of the annuity factors; practice the schedules.
+5. **Bonds** — the biggest single application; drill the two equivalent formulas until automatic.
+6. **Depreciation** — four methods, mechanical once you nail the scrap-value rule.
+7. **Economics applications** — calculus review; marginal = derivative, optimize with first/second derivative tests.
