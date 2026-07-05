@@ -117,3 +117,40 @@ $$e = 100\left(R^n - 1\right) \quad\text{per year, with } R \text{ and } n \text
 
 ---
 
+## Chapter 2 — Annuities
+
+An annuity is a **sequence of equal payments** at equal time intervals. Classified by timing (ordinary = end of period; due = start) and by term.
+
+### 2.1–2.3 Amount (future value) of an annuity
+
+**At simple interest** the deposits form an arithmetic-style sum. **At compound interest** (the case that matters):
+
+$$A = d\left(\frac{R^n - 1}{R - 1}\right) = d\, s_{\overline{n}|r}, \qquad s_{\overline{n}|r} = \frac{R^n - 1}{r\%} = \frac{(1+r\%)^n - 1}{r\%}$$
+
+$d$ = deposit each period, accumulated to just after the last deposit.
+
+### 2.4 Present value of an annuity
+
+$$p = d\left(\frac{1 - R^{-n}}{R - 1}\right) = d\, a_{\overline{n}|r} = A R^{-n}, \qquad a_{\overline{n}|r} = \frac{1 - R^{-n}}{r\%}$$
+
+This is the lump sum **today** equivalent to receiving $d$ per period for $n$ periods.
+
+### 2.5 Perpetuity
+
+Payments that never end. Since $R^{-n} \to 0$, the present value collapses to:
+
+$$p = \frac{d}{R - 1} = \frac{100\,d}{r}$$
+
+### 2.6 Capitalization / capitalized cost
+
+The total endowment needed to buy an asset **and** replace it forever.
+
+- **Replacement every period ($n = 1$ case):**
+$$C = p + \frac{d}{R - 1} = p + \frac{100\,d}{r}$$
+- **Replacement every $n$ periods** (renewal cost $D$ set aside via a sinking fund):
+$$C = p + \frac{D}{R - 1}\cdot\frac{1}{s_{\overline{n}|r}}, \qquad\text{equivalently}\qquad C = \frac{p}{R - 1}\cdot\frac{1}{a_{\overline{n}|r}}$$
+
+**Why this trips people up:** confusing $s_{\overline{n}|r}$ (future value, grows the deposits) with $a_{\overline{n}|r}$ (present value, discounts the payments). Rule of thumb: **saving up → $s$; paying off → $a$.**
+
+---
+
