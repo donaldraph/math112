@@ -301,5 +301,75 @@ const QUESTIONS = [
     explanation: '$V=5425.50(0.6)^3=5425.50(0.216)=\\$1{,}171.91$.'
   },
 
-
+  // ---------- Chapter 6: Economics applications ----------
+  {
+    id: 'c6-01', chapter: 'Ch 6 · Economics', concept: 'Marginal cost', tier: 1,
+    stem: 'If $C(x)=\\dfrac12 x^2+3x-20$, the marginal cost $\\dfrac{dC}{dx}$ is:',
+    choices: ['$x+3$', '$\\tfrac12 x+3$', '$x^2+3$', '$x-20$'],
+    answer: 0,
+    explanation: 'Marginal cost is the derivative: $\\dfrac{d}{dx}\\left(\\tfrac12 x^2+3x-20\\right)=x+3$. "Marginal" always means "derivative of."'
+  },
+  {
+    id: 'c6-02', chapter: 'Ch 6 · Economics', concept: 'Marginal revenue', tier: 1,
+    stem: 'For revenue $R=15x-x^2$, the marginal revenue $\\dfrac{dR}{dx}$ is:',
+    choices: ['$15-2x$', '$15-x$', '$15x$', '$-2x$'],
+    answer: 0,
+    explanation: '$\\dfrac{dR}{dx}=15-2x$.'
+  },
+  {
+    id: 'c6-03', chapter: 'Ch 6 · Economics', concept: 'MPC and MPS', tier: 1,
+    stem: 'If the marginal propensity to consume is $\\dfrac34$, the marginal propensity to save is:',
+    choices: ['$\\dfrac14$', '$\\dfrac34$', '$1$', '$\\dfrac43$'],
+    answer: 0,
+    explanation: 'Since $Y=C+S$, we have $\\text{MPC}+\\text{MPS}=1$, so $\\text{MPS}=1-\\dfrac34=\\dfrac14$. This identity is a fast check-your-work step.'
+  },
+  {
+    id: 'c6-04', chapter: 'Ch 6 · Economics', concept: 'Maximizing revenue', tier: 2,
+    stem: 'Demand is $q=36-3p$, so $R=36p-3p^2$. Setting $MR=36-6p=0$ gives $p=6$. The maximum revenue is:',
+    choices: ['$\\$108$', '$\\$60$', '$\\$216$', '$\\$72$'],
+    answer: 0,
+    explanation: '$R=36(6)-3(6)^2=216-108=\\$108$. $\\$216$ forgets to subtract the second term; $\\$60$ evaluates at $p=2$.'
+  },
+  {
+    id: 'c6-05', chapter: 'Ch 6 · Economics', concept: 'Elasticity of demand', tier: 2,
+    stem: 'For $q=100-5p$ at $p=3$ (so $q=85$), the price elasticity $e=\\dfrac{dq}{dp}\\cdot\\dfrac{p}{q}$ is:',
+    choices: ['$-\\dfrac{3}{17}$ (inelastic)', '$-5$', '$-\\dfrac{17}{3}$', '$-\\dfrac{3}{20}$'],
+    answer: 0,
+    explanation: '$e=\\dfrac{dq}{dp}\\cdot\\dfrac{p}{q}=(-5)\\dfrac{3}{85}=-\\dfrac{15}{85}=-\\dfrac{3}{17}$. Since $|e|<1$, demand is relatively inelastic. Judge elasticity by $|e|$ vs. $1$, but keep the sign.'
+  },
+  {
+    id: 'c6-06', chapter: 'Ch 6 · Economics', concept: 'Minimizing average cost', tier: 2,
+    stem: 'For $C(q)=8000-25q+0.02q^2$, minimizing by $\\dfrac{dC}{dq}=-25+0.04q=0$ gives:',
+    choices: ['$q=625$ units', '$q=1250$ units', '$q=320$ units', '$q=25$ units'],
+    answer: 0,
+    explanation: '$-25+0.04q=0\\Rightarrow q=\\dfrac{25}{0.04}=625$ units.'
+  },
+  {
+    id: 'c6-07', chapter: 'Ch 6 · Economics', concept: 'Monopolist output (MR=MC)', tier: 3,
+    stem: 'A monopolist has demand $x=2000-20p$ (so $p=100-0.05x$) and cost $C=5x+0.0125x^2$. Setting $MR=MC$: $100-0.1x=5+0.025x$. The profit-maximizing output is:',
+    choices: ['$x=760$', '$x=950$', '$x=1000$', '$x=500$'],
+    answer: 0,
+    explanation: '$100-0.1x=5+0.025x\\Rightarrow 95=0.125x\\Rightarrow x=760$. For a monopolist, $MR\\ne p$; the condition is $MR=MC$.'
+  },
+  {
+    id: 'c6-08', chapter: 'Ch 6 · Economics', concept: 'Monopolist profit', tier: 3,
+    stem: 'For that monopolist ($x=760$), total profit $=760(95)-0.0625(760)^2$ equals:',
+    choices: ['$\\$36{,}100$', '$\\$72{,}200$', '$\\$36{,}000$', '$\\$95$'],
+    answer: 0,
+    explanation: '$760(95)-0.0625(760)^2=72200-36100=\\$36{,}100$.'
+  },
+  {
+    id: 'c6-09', chapter: 'Ch 6 · Economics', concept: 'Second-order condition', tier: 3,
+    stem: 'After solving $\\dfrac{d\\pi}{dx}=0$, to confirm the stationary point is a maximum you must check:',
+    choices: ['$\\dfrac{d^2\\pi}{dx^2}<0$', '$\\dfrac{d^2\\pi}{dx^2}>0$', '$\\dfrac{d\\pi}{dx}>0$', '$\\pi>0$'],
+    answer: 0,
+    explanation: 'Setting the first derivative to zero only locates a stationary point. The sufficient condition for a maximum is $\\pi^{\\prime\\prime}(x)<0$ — often worth marks on its own.'
+  },
+  {
+    id: 'c6-10', chapter: 'Ch 6 · Economics', concept: 'Max profit (cubic cost)', tier: 3,
+    stem: 'For $C(x)=5000+0.00002x^3-0.018x^2+7.4x$ at price $\\$20$, solving $\\dfrac{d\\pi}{dx}=12.6-0.00006x^2+0.036x=0$ (rejecting the negative root) gives:',
+    choices: ['$x=850$', '$x=-250$', '$x=950$', '$x=760$'],
+    answer: 0,
+    explanation: 'The quadratic has roots $x=850$ and $x=-250$; output can\'t be negative, so $x=850$. Then $\\pi^{\\prime\\prime}=-0.00012x+0.036=-0.066<0$ confirms a maximum.'
+  }
 ];
