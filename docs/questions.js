@@ -90,5 +90,49 @@ const QUESTIONS = [
     explanation: 'Since $1+rm>1$, the fraction $\\dfrac{r}{1+rm}<r$. The discount rate is applied to the larger maturity value, so it is set below the interest rate to describe the same time value.'
   },
 
+  // ---------- Chapter 2: Annuities ----------
+  {
+    id: 'c2-01', chapter: 'Ch 2 · Annuities', concept: 'Amount of an annuity ($s$ factor)', tier: 1,
+    stem: '$\\$1{,}000$ is deposited at the end of each year for $5$ years at $10\\%$. With $s_{\\overline{5}|10}=6.1051$, the accumulated amount $A=d\\,s_{\\overline{n}|r}$ is:',
+    choices: ['$\\$6{,}105.10$', '$\\$5{,}000$', '$\\$3{,}790.79$', '$\\$6{,}715.61$'],
+    answer: 0,
+    explanation: '$A=d\\,s_{\\overline{5}|10}=1000(6.1051)=\\$6{,}105.10$. $\\$3{,}790.79$ is the *present* value ($d\\,a_{\\overline{5}|10}$) — that mixes up the two factors.'
+  },
+  {
+    id: 'c2-02', chapter: 'Ch 2 · Annuities', concept: 'Present value of an annuity ($a$ factor)', tier: 1,
+    stem: 'Find the present value of $\\$1{,}000$ received at the end of each year for $5$ years at $10\\%$. Use $a_{\\overline{5}|10}=3.79079$.',
+    choices: ['$\\$3{,}790.79$', '$\\$5{,}000$', '$\\$6{,}105.10$', '$\\$4{,}169.87$'],
+    answer: 0,
+    explanation: '$p=d\\,a_{\\overline{5}|10}=1000(3.79079)=\\$3{,}790.79$. $\\$6{,}105.10$ is the future value ($d\\,s_{\\overline{5}|10}$).'
+  },
+  {
+    id: 'c2-03', chapter: 'Ch 2 · Annuities', concept: 'Perpetuity', tier: 1,
+    stem: 'A perpetuity pays $\\$500$ per year forever. At $5\\%$, its present value $p=\\dfrac{100d}{r}$ is:',
+    choices: ['$\\$10{,}000$', '$\\$2{,}500$', '$\\$25{,}000$', '$\\$500$'],
+    answer: 0,
+    explanation: '$p=\\dfrac{d}{R-1}=\\dfrac{500}{0.05}=\\dfrac{100(500)}{5}=\\$10{,}000$. Because $R^{-n}\\to 0$, the present value of an endless stream collapses to this simple ratio.'
+  },
+  {
+    id: 'c2-04', chapter: 'Ch 2 · Annuities', concept: '$s$ vs. $a$', tier: 2,
+    stem: 'You want to accumulate a target sum by making equal periodic deposits. Which annuity factor applies?',
+    choices: ['$s_{\\overline{n}|r}$ (accumulation / future value)', '$a_{\\overline{n}|r}$ (present value)', '$R^{-n}$ (single discount)', 'the perpetuity factor'],
+    answer: 0,
+    explanation: 'Saving up toward a future target uses the accumulation factor $s_{\\overline{n}|r}$. Rule of thumb: **saving up $\\to s$; paying off / valuing a stream today $\\to a$.**'
+  },
+  {
+    id: 'c2-05', chapter: 'Ch 2 · Capitalized cost', concept: 'Capitalized cost ($n=1$)', tier: 2,
+    stem: 'An asset costs $\\$8{,}000$ and needs $\\$500$ upkeep at the end of every year forever, at $5\\%$. Using $C=p+\\dfrac{100d}{r}$, the capitalized cost is:',
+    choices: ['$\\$18{,}000$', '$\\$8{,}500$', '$\\$10{,}000$', '$\\$28{,}000$'],
+    answer: 0,
+    explanation: '$C=8000+\\dfrac{100(500)}{5}=8000+10000=\\$18{,}000$. The upkeep is a perpetuity worth $\\$10{,}000$ today, added to the purchase price.'
+  },
+  {
+    id: 'c2-06', chapter: 'Ch 2 · Capitalized cost', concept: 'Capitalized cost ($n>1$)', tier: 3,
+    stem: 'For replacement every $n$ periods, capitalized cost is $C=p+\\dfrac{D}{R-1}\\cdot\\dfrac{1}{s_{\\overline{n}|r}}$. Here $D$ represents the:',
+    choices: ['renewal (replacement) cost, funded by a sinking fund', 'annual upkeep payment', 'present value of the asset', 'redemption value of a bond'],
+    answer: 0,
+    explanation: 'The term $\\dfrac{D}{R-1}\\cdot\\dfrac{1}{s_{\\overline{n}|r}}$ is the endowment that, via a sinking fund, sets aside the renewal cost $D$ each cycle forever. Equivalently $C=\\dfrac{p}{R-1}\\cdot\\dfrac{1}{a_{\\overline{n}|r}}$.'
+  },
+
 
 ];
