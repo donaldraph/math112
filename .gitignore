@@ -1,0 +1,11 @@
+# Scanned source pages (copyrighted book, large binaries) — never pushed
+pages/
+*.pdf.orig
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+
+# Node (not used at runtime, but just in case)
+node_modules/
