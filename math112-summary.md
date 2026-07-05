@@ -154,3 +154,38 @@ $$C = p + \frac{D}{R - 1}\cdot\frac{1}{s_{\overline{n}|r}}, \qquad\text{equivale
 
 ---
 
+## Chapter 3 — Debt Extinction: Amortization and Sinking Funds
+
+### 3.1 Amortization
+
+Repay a loan $p$ with $n$ equal payments; each payment is part interest, part principal.
+
+$$p = d\, a_{\overline{n}|r} \quad\Longrightarrow\quad d = \frac{p}{a_{\overline{n}|r}}$$
+
+- **Interest portion** of a payment = (rate) $\times$ (outstanding balance at start of period).
+- **Principal portion** = payment $-$ interest portion.
+- **Outstanding principal** at any point = present value of the payments **still remaining** $= d\, a_{\overline{k}|r}$ for $k$ payments left.
+
+**Buyer's / seller's equity.** At any moment:
+$$\text{buyer's equity} + \text{seller's equity} = \text{selling price}$$
+Buyer's equity = what the buyer has paid off (principal reduced); seller's equity = outstanding balance.
+
+**Add-on interest** (a *different*, more expensive scheme):
+$$\text{total owed} = \text{principal} + \text{simple interest on the whole principal}, \qquad \text{payment} = \frac{\text{total}}{n}$$
+Charging simple interest on the full principal the whole term makes the *effective* rate much higher than the quoted rate.
+
+### 3.2 Sinking fund
+
+Pay the lender **interest only** each period; separately, build a fund that reaches the principal $A$ by maturity.
+
+$$\text{periodic deposit } d = \frac{A}{s_{\overline{n}|r}}, \qquad \text{periodic cost} = \underbrace{(\text{interest to lender})}_{A\cdot r\%} + \underbrace{d}_{\text{fund deposit}}$$
+
+A **sinking-fund accumulation schedule** tracks: deposit, interest earned by the fund, and the growing fund balance until it equals $A$.
+
+Handy tabulated constants that recur in the book's examples:
+$$\frac{1}{a_{\overline{6}|2}} = 0.178526, \qquad a_{\overline{20}|1} = 18.045552, \qquad \frac{1}{s_{\overline{10}|2}} = 0.091327$$
+
+**Why this trips people up:** In amortization the borrower pays interest on a **shrinking** balance; in a sinking fund the borrower pays interest on the **full** principal the whole time (but earns interest inside the fund). They give different total costs — read which scheme the question specifies.
+
+---
+
