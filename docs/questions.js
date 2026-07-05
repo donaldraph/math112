@@ -134,5 +134,56 @@ const QUESTIONS = [
     explanation: 'The term $\\dfrac{D}{R-1}\\cdot\\dfrac{1}{s_{\\overline{n}|r}}$ is the endowment that, via a sinking fund, sets aside the renewal cost $D$ each cycle forever. Equivalently $C=\\dfrac{p}{R-1}\\cdot\\dfrac{1}{a_{\\overline{n}|r}}$.'
   },
 
+  // ---------- Chapter 3: Amortization & sinking funds ----------
+  {
+    id: 'c3-01', chapter: 'Ch 3 · Amortization', concept: 'Amortization payment', tier: 1,
+    stem: 'A loan of $\\$10{,}000$ is amortized by $6$ equal annual payments at $2\\%$. With $\\dfrac{1}{a_{\\overline{6}|2}}=0.178526$, the payment $d=\\dfrac{p}{a_{\\overline{n}|r}}$ is:',
+    choices: ['$\\$1{,}785.26$', '$\\$1{,}666.67$', '$\\$178.53$', '$\\$10{,}178.53$'],
+    answer: 0,
+    explanation: '$d=10000\\times 0.178526=\\$1{,}785.26$. Dividing the principal by $6$ ($\\$1{,}666.67$) ignores interest.'
+  },
+  {
+    id: 'c3-02', chapter: 'Ch 3 · Sinking fund', concept: 'Sinking-fund deposit', tier: 1,
+    stem: 'To accumulate $\\$50{,}000$ in $10$ years by equal year-end deposits at $2\\%$, use $d=\\dfrac{A}{s_{\\overline{n}|r}}$ with $\\dfrac{1}{s_{\\overline{10}|2}}=0.091327$. The deposit is:',
+    choices: ['$\\$4{,}566.35$', '$\\$5{,}000$', '$\\$4{,}166.67$', '$\\$45{,}663.50$'],
+    answer: 0,
+    explanation: '$d=50000\\times 0.091327=\\$4{,}566.35$. Just dividing by $10$ ($\\$5{,}000$) ignores the interest the fund earns.'
+  },
+  {
+    id: 'c3-03', chapter: 'Ch 3 · Amortization', concept: 'Outstanding balance', tier: 1,
+    stem: 'In an amortized loan, the outstanding principal at any time equals:',
+    choices: ['the present value of the remaining payments, $d\\,a_{\\overline{k}|r}$', 'the sum of the remaining payments', 'the original principal minus one payment', 'the future value of the payments already made'],
+    answer: 0,
+    explanation: 'The balance is exactly the present value of the payments still to come: $d\\,a_{\\overline{k}|r}$ for $k$ payments left. This is also the seller\'s equity.'
+  },
+  {
+    id: 'c3-04', chapter: 'Ch 3 · Amortization', concept: 'Interest vs. principal portion', tier: 2,
+    stem: 'In an amortization schedule, the interest portion of a payment equals:',
+    choices: ['(period rate) $\\times$ (outstanding balance at start of period)', '(period rate) $\\times$ (original principal)', 'the payment divided by $n$', 'the payment minus the outstanding balance'],
+    answer: 0,
+    explanation: 'Interest is charged on the *current* (shrinking) balance: $\\text{interest}=r\\%\\times(\\text{outstanding balance})$. The principal portion is then $\\text{payment}-\\text{interest}$.'
+  },
+  {
+    id: 'c3-05', chapter: 'Ch 3 · Amortization', concept: 'Add-on interest', tier: 2,
+    stem: 'A $\\$1{,}200$ loan at $10\\%$ add-on interest for $2$ years is repaid in $24$ equal monthly payments. With total owed $=$ principal $+$ simple interest on the whole principal, each payment is:',
+    choices: ['$\\$60$', '$\\$50$', '$\\$55$', '$\\$62$'],
+    answer: 0,
+    explanation: 'Total $=1200+\\dfrac{1200\\cdot 10\\cdot 2}{100}=1200+240=1440$; payment $=1440\\div 24=\\$60$. Charging simple interest on the full principal the whole term makes the effective rate far above $10\\%$.'
+  },
+  {
+    id: 'c3-06', chapter: 'Ch 3 · Sinking fund', concept: 'Total periodic cost', tier: 3,
+    stem: 'Under a sinking-fund plan for a debt $A$, the total periodic cost is:',
+    choices: ['interest to the lender ($A\\cdot r\\%$) plus the fund deposit $d$', 'just the fund deposit $d$', 'just the interest to the lender', '$A\\div n$'],
+    answer: 0,
+    explanation: 'In a sinking fund you pay the lender interest only on the full principal ($A\\cdot r\\%$) each period, *and* deposit $d=\\dfrac{A}{s_{\\overline{n}|r}}$ into the fund. The periodic cost is the sum of both.'
+  },
+  {
+    id: 'c3-07', chapter: 'Ch 3 · Amortization', concept: 'Buyer\'s / seller\'s equity', tier: 3,
+    stem: 'At any point during an amortized purchase, buyer\'s equity $+$ seller\'s equity equals:',
+    choices: ['the selling price', 'the outstanding balance', 'the total interest paid', 'zero'],
+    answer: 0,
+    explanation: 'Seller\'s equity is the outstanding balance; buyer\'s equity is the principal paid off so far. Together they always reconstruct the selling price.'
+  },
+
 
 ];
