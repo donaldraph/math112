@@ -308,3 +308,63 @@ Solve for the rate using cost, scrap, and life: $s = p\left(1 - \tfrac{r}{100}\r
 
 ---
 
+## Chapter 6 — Applications of Mathematical Methods in Economics
+
+Calculus applied to cost, revenue, profit, elasticity, and consumption. "Marginal ___" always means **the derivative** of that quantity.
+
+### 6.1 Marginal cost and marginal revenue
+
+$$\text{Total revenue } R(x) = p\cdot x, \qquad \text{Profit } \pi(x) = R(x) - C(x)$$
+$$\text{Marginal cost} = \frac{dC}{dx}, \qquad \text{Marginal revenue} = \frac{dR}{dx}, \qquad \text{Marginal profit} = \frac{d\pi}{dx}$$
+
+**Maximize profit:** set $\dfrac{d\pi}{dx} = 0$ (necessary), then check $\dfrac{d^2\pi}{dx^2} < 0$ (sufficient). Equivalent test: **MC = MR** at the optimum.
+
+> **Example 1.** $C = \tfrac12 x^2 + 3x - 20$, $R = 15x - x^2$.
+> MC $= x + 3$; MR $= 15 - 2x$; profit $= R - C = 12x - \tfrac32 x^2 + 20$.
+
+> **Example 2 (minimize average cost).** $C(q) = 8000 - 25q + 0.02q^2$.
+> $\dfrac{dC}{dq} = -25 + 0.04q = 0 \Rightarrow q = 625$ units.
+
+> **Example 3 (demand $q = 36 - 3p$).**
+> Revenue $R = pq = 36p - 3p^2$. At $p = 2$: $R = 72 - 12 = \$60$.
+> MR $= 36 - 6p = 0 \Rightarrow p = \$6$. Max revenue $= 36(6) - 3(6)^2 = \$108$.
+
+> **Example 4 (max profit, cubic cost).** $C(x) = 5000 + 0.00002x^3 - 0.018x^2 + 7.4x$, price \$20.
+> $P(x) = 12.6x - 5000 - 0.00002x^3 + 0.018x^2$. $\dfrac{dP}{dx} = 12.6 - 0.00006x^2 + 0.036x = 0 \Rightarrow x = 850$ (reject $-250$).
+> $\dfrac{d^2P}{dx^2} = -0.00012x + 0.036 = -0.066 < 0$ at $x = 850$ → maximum. ✓
+
+> **Example 5 (monopolist).** Demand $x = 2000 - 20p$, cost $C(x) = 5x + 0.0125x^2$.
+> Inverse demand (average revenue): $p = 100 - 0.05x$.
+> $R(x) = 100x - 0.05x^2$; MR $= 100 - 0.1x$. MC $= 5 + 0.025x$.
+> $P(x) = 95x - 0.0625x^2$; set MR = MC: $5 + 0.025x = 100 - 0.1x \Rightarrow 0.125x = 95 \Rightarrow x = 760$.
+> $\dfrac{d^2P}{dx^2} = -0.125 < 0$ → max. Total profit $= 760(95) - 0.0625(760)^2 = 72200 - 36100 = \$36100$.
+
+**Competitive vs. monopoly.** In pure competition $\dfrac{dR}{dx} = p$ (price is constant, MR = price). A monopolist affects price by changing output, so MR $\ne p$; the profit-max condition is MR = MC.
+
+### 6.2 Elasticity of demand and supply
+
+Percentage change in quantity per percentage change in price:
+
+$$e = \frac{\Delta y / y}{\Delta x / x} = \frac{\Delta y}{\Delta x}\cdot\frac{x}{y} \quad\xrightarrow{\text{continuous}}\quad e = \frac{dy}{dx}\cdot\frac{x}{y}$$
+
+For demand $q = f(p)$:
+$$e = \frac{dq}{dp}\cdot\frac{p}{q}$$
+
+> **Example 6.** $q = 100 - 5p$, at $p = 3$: $q = 85$, $\dfrac{dq}{dp} = -5$.
+> $e = \dfrac{-5(3)}{85} = \dfrac{-3}{17}$. Since $|e| < 1$, demand is **relatively inelastic**.
+
+Reading $|e|$: $|e| > 1$ elastic, $|e| < 1$ inelastic, $|e| = 1$ unit-elastic. Demand elasticity is typically negative (price up → quantity down).
+
+### 6.3 Marginal propensities to consume and save
+
+With income $Y$, consumption $C$, savings $S$, and $Y = C + S$:
+
+$$\text{MPC} = \frac{dC}{dY}, \qquad \text{MPS} = \frac{dS}{dY}, \qquad \text{MPC} + \text{MPS} = 1$$
+
+> **Example.** $C(y) = 10 + \tfrac34 y \Rightarrow \text{MPC} = \dfrac{dC}{dy} = \tfrac34$.
+> Since $Y = C + S$: $S = -10 + \tfrac14 y \Rightarrow \text{MPS} = \tfrac14$. And $\tfrac34 + \tfrac14 = 1$. ✓
+
+**Why this trips people up:** forgetting that MPC + MPS = 1 — it's the fastest way to get one from the other, and a common check-your-work step.
+
+---
+
