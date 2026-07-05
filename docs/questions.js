@@ -185,5 +185,56 @@ const QUESTIONS = [
     explanation: 'Seller\'s equity is the outstanding balance; buyer\'s equity is the principal paid off so far. Together they always reconstruct the selling price.'
   },
 
+  // ---------- Chapter 4: Bonds ----------
+  {
+    id: 'c4-01', chapter: 'Ch 4 · Bonds', concept: 'Coupon payment', tier: 1,
+    stem: 'A $\\$1{,}000$ bond has a $6\\%$ bond rate with interest paid semi-annually. The coupon $d=b\\%\\times f$ per period is:',
+    choices: ['$\\$30$', '$\\$60$', '$\\$15$', '$\\$50$'],
+    answer: 0,
+    explanation: 'The bond rate per period is $6\\%\\div 2=3\\%$, so $d=3\\%\\times 1000=\\$30$. The coupon always uses the *bond* rate, not the yield.'
+  },
+  {
+    id: 'c4-02', chapter: 'Ch 4 · Bonds', concept: 'Premium vs. discount', tier: 1,
+    stem: 'A bond\'s coupon (bond) rate is $6\\%$ and its yield rate is $5\\%$. The bond sells at a:',
+    choices: ['premium (above redemption value)', 'discount (below redemption value)', 'par (equal to redemption value)', 'price that cannot be determined'],
+    answer: 0,
+    explanation: 'When bond rate $>$ yield, the coupons are worth more than the market requires, so the price is a premium. If bond rate $<$ yield you get a discount.'
+  },
+  {
+    id: 'c4-03', chapter: 'Ch 4 · Bonds', concept: 'Purchase price (shortcut)', tier: 1,
+    stem: 'A $\\$1{,}000$, $6\\%$ bond redeemable at par yields $5\\%$ semi-annually, with $n=7$, $d=\\$30$, and $a_{\\overline{7}|2.5}=6.349391$. Using $V_B=A+(d-Ar\\%)a_{\\overline{n}|r}$, the price is:',
+    choices: ['$\\$1{,}031.75$', '$\\$1{,}000$', '$\\$968.25$', '$\\$1{,}190.48$'],
+    answer: 0,
+    explanation: '$V_B=1000+(30-1000\\cdot 0.025)(6.349391)=1000+(30-25)(6.349391)=1000+31.75=\\$1{,}031.75$ — a premium, since $6\\%>5\\%$.'
+  },
+  {
+    id: 'c4-04', chapter: 'Ch 4 · Bonds', concept: 'Redemption above par', tier: 2,
+    stem: 'The same $\\$1{,}000$, $6\\%$ bond (yield $5\\%$ semi, $n=7$, $d=\\$30$) is now redeemable at $105\\%$, so $A=\\$1{,}050$. Given PV of redemption $=1050(1.025)^{-7}=\\$883.33$ and PV of coupons $=\\$190.48$, the price is:',
+    choices: ['$\\$1{,}073.81$', '$\\$1{,}031.75$', '$\\$1{,}050$', '$\\$1{,}240.00$'],
+    answer: 0,
+    explanation: '$V_B=p+I=883.33+190.48=\\$1{,}073.81$. Raising the redemption value raises the PV of the redemption term; the coupon PV is unchanged.'
+  },
+  {
+    id: 'c4-05', chapter: 'Ch 4 · Bonds', concept: 'Discount bond', tier: 2,
+    stem: 'A $\\$1{,}000$, $5\\%$ bond is bought to yield $6\\%$. Relative to its redemption value, it is priced at a:',
+    choices: ['discount (below $\\$1{,}000$)', 'premium (above $\\$1{,}000$)', 'par ($\\$1{,}000$)', 'price that cannot be determined'],
+    answer: 0,
+    explanation: 'Bond rate $5\\%<$ yield $6\\%$, so the coupons fall short of what the market demands and the price sits below redemption value — a discount.'
+  },
+  {
+    id: 'c4-06', chapter: 'Ch 4 · Bonds', concept: 'Bond rate vs. yield rate', tier: 3,
+    stem: 'In every bond calculation, the coupon $d$ is computed with the ___ rate, while the discount factors $R^{-n}$ and $a_{\\overline{n}|r}$ use the ___ rate.',
+    choices: ['bond rate; yield rate', 'yield rate; bond rate', 'bond rate; bond rate', 'yield rate; yield rate'],
+    answer: 0,
+    explanation: 'Coupon $d=$ (bond rate) $\\times$ face. All discounting uses the yield rate. Swapping them is the classic bond mistake — and it flips your premium/discount sign.'
+  },
+  {
+    id: 'c4-07', chapter: 'Ch 4 · Bonds', concept: 'Premium amortization schedule', tier: 3,
+    stem: 'In a premium bond\'s amortization schedule, each period the book value is:',
+    choices: ['written down toward the redemption value', 'written up toward the redemption value', 'held constant', 'written up above the face value'],
+    answer: 0,
+    explanation: 'A premium bond\'s book value is written *down* each period by (coupon $-$ yield$\\times$book value), converging to the redemption value at maturity. A discount bond is written *up*.'
+  },
+
 
 ];
