@@ -236,5 +236,70 @@ const QUESTIONS = [
     explanation: 'A premium bond\'s book value is written *down* each period by (coupon $-$ yield$\\times$book value), converging to the redemption value at maturity. A discount bond is written *up*.'
   },
 
+  // ---------- Chapter 5: Depreciation ----------
+  {
+    id: 'c5-01', chapter: 'Ch 5 · Depreciation', concept: 'Straight-line (yearly)', tier: 1,
+    stem: 'A machine costs $\\$340$, scrap $\\$75$, life $5$ years. The yearly straight-line write-off $\\dfrac{p-s}{n}$ is:',
+    choices: ['$\\$53$', '$\\$68$', '$\\$4.42$', '$\\$44.17$'],
+    answer: 0,
+    explanation: '$\\dfrac{p-s}{n}=\\dfrac{340-75}{5}=\\dfrac{265}{5}=\\$53$. Using $p$ alone ($340/5=\\$68$) forgets to subtract the scrap value.'
+  },
+  {
+    id: 'c5-02', chapter: 'Ch 5 · Depreciation', concept: 'Straight-line (monthly)', tier: 1,
+    stem: 'Same machine ($\\$340$, scrap $\\$75$, $5$ yr). The monthly straight-line write-off $\\dfrac{p-s}{12n}$ is:',
+    choices: ['$\\$4.42$', '$\\$5.67$', '$\\$53$', '$\\$2.21$'],
+    answer: 0,
+    explanation: '$\\dfrac{265}{12(5)}=\\dfrac{265}{60}=\\$4.42$ per month.'
+  },
+  {
+    id: 'c5-03', chapter: 'Ch 5 · Depreciation', concept: 'Straight-line book value', tier: 1,
+    stem: 'For the $\\$340$ machine (scrap $\\$75$, $5$ yr), the book value after $2$ years, $V=p-(p-s)\\dfrac{t}{n}$, is:',
+    choices: ['$\\$234$', '$\\$181$', '$\\$106$', '$\\$128$'],
+    answer: 0,
+    explanation: '$V=340-265\\left(\\dfrac{2}{5}\\right)=340-106=\\$234$. ($\\$181$ is the sum-of-years\'-digits answer — a different method.)'
+  },
+  {
+    id: 'c5-04', chapter: 'Ch 5 · Depreciation', concept: 'Double-declining rate', tier: 1,
+    stem: 'For a $5$-year asset, the double-declining-balance rate $\\dfrac{2}{n}$ is:',
+    choices: ['$40\\%$', '$20\\%$', '$50\\%$', '$10\\%$'],
+    answer: 0,
+    explanation: 'The rate is twice the straight-line rate: $\\dfrac{2}{5}=40\\%$, applied to the current book value each year.'
+  },
+  {
+    id: 'c5-05', chapter: 'Ch 5 · Depreciation', concept: 'Sum-of-years\'-digits (year 1)', tier: 2,
+    stem: 'A $\\$340$ asset, scrap $\\$75$, life $5$ ($S_5=15$). Year-1 depreciation $(p-s)\\dfrac{n}{S_n}$ is:',
+    choices: ['$\\$88.33$', '$\\$53$', '$\\$70.67$', '$\\$17.67$'],
+    answer: 0,
+    explanation: '$265\\times\\dfrac{5}{15}=\\$88.33$. The largest fraction ($5/15$) applies in year 1; $\\$70.67$ is the year-2 amount ($265\\times 4/15$).'
+  },
+  {
+    id: 'c5-06', chapter: 'Ch 5 · Depreciation', concept: 'Sum-of-years\'-digits book value', tier: 2,
+    stem: 'Same asset ($\\$340$, scrap $\\$75$, $5$ yr, SYD). With year-1 $=\\$88.33$ and year-2 $=\\$70.67$, the book value after $2$ years is:',
+    choices: ['$\\$181$', '$\\$234$', '$\\$106$', '$\\$159$'],
+    answer: 0,
+    explanation: 'Two-year depreciation $=88.33+70.67=159$, so $V=340-159=\\$181$. ($\\$159$ is the depreciation, not the book value.)'
+  },
+  {
+    id: 'c5-07', chapter: 'Ch 5 · Depreciation', concept: 'Scrap-value treatment', tier: 2,
+    stem: 'Which depreciation method ignores the scrap value in its calculation?',
+    choices: ['Double-declining-balance', 'Straight-line', 'Sum-of-years\'-digits', 'Fixed-rate'],
+    answer: 0,
+    explanation: 'Double-declining-balance applies rate $\\dfrac{2}{n}$ to book value and ignores scrap. Straight-line and SYD depreciate $(p-s)$; fixed-rate uses scrap only to back out the rate.'
+  },
+  {
+    id: 'c5-08', chapter: 'Ch 5 · Depreciation', concept: 'Fixed-rate (solve for rate)', tier: 3,
+    stem: 'An asset costing $\\$5{,}425.50$ is worth $\\$1{,}953.18$ after $2$ years. From $1953.18=5425.50\\left(1-\\dfrac{r}{100}\\right)^2$, the fixed depreciation rate is:',
+    choices: ['$40\\%$', '$36\\%$', '$20\\%$', '$60\\%$'],
+    answer: 0,
+    explanation: '$\\left(1-\\dfrac{r}{100}\\right)^2=\\dfrac{1953.18}{5425.50}=0.36$, so $1-\\dfrac{r}{100}=0.6$ and $r=40\\%$.'
+  },
+  {
+    id: 'c5-09', chapter: 'Ch 5 · Depreciation', concept: 'Fixed-rate book value', tier: 3,
+    stem: 'With that $40\\%$ fixed rate, the book value after $3$ years, $V=5425.50(0.6)^3$, is:',
+    choices: ['$\\$1{,}171.91$', '$\\$1{,}953.18$', '$\\$781.27$', '$\\$1{,}302.12$'],
+    answer: 0,
+    explanation: '$V=5425.50(0.6)^3=5425.50(0.216)=\\$1{,}171.91$.'
+  },
+
 
 ];
