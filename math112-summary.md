@@ -247,3 +247,64 @@ A schedule (book's Tables 4.1 / 4.2) tracks coupon, yield interest, amortization
 
 ---
 
+## Chapter 5 — Depreciation
+
+Decline in an asset's value over its useful life. Notation: $p$ = new cost, $s$ = scrap/salvage value, $n$ = useful life (years), $V$ = book value at time $t$.
+
+### 5.1 Linear (straight-line) method
+
+Equal write-off every year.
+
+$$\text{yearly write-off} = \frac{p - s}{n}, \qquad \text{monthly write-off} = \frac{p - s}{12n}$$
+$$V = p - (p - s)\frac{t}{n} \qquad\text{(if no scrap, } s = 0:\ V = p\Big(1 - \tfrac{t}{n}\Big)\text{)}$$
+Amount depreciated by time $t$: $(p - s)\dfrac{t}{n}$.
+
+> **Worked example 1.** Machine costs \$340, scrap \$75, life 5 yr.
+> Monthly write-off $= \dfrac{340 - 75}{12(5)} = \dfrac{265}{60} = \$4.42$.
+> Book value at 2 yr $= 340 - 265\left(\tfrac{2}{5}\right) = 340 - 106 = \$234$.
+
+### 5.2 Sum-of-years'-digits method
+
+Bigger write-off early. Denominator = sum of the digits $S_n = 1 + 2 + \dots + n = \dfrac{n(n+1)}{2}$.
+Numerator for year $k$ is $n - k + 1$ (largest first). So:
+$$\text{depreciation in year } k = (p - s)\cdot\frac{n - k + 1}{S_n}$$
+
+> **Worked example 3.** \$340 cost, \$75 scrap, life 5. Total depreciation $= 265$, $S_5 = \tfrac{5(6)}{2} = 15$.
+> Year 1: $265\times\tfrac{5}{15} = \$88.33$. Year 2: $265\times\tfrac{4}{15} = \$70.67$.
+> Two-year total $= 159$ → book value $= 340 - 159 = \$181$.
+
+> **Worked example 4.** Equipment \$61050, scrap \$9000, life 3. Total $= 52050$, $S_3 = 6$.
+> Year 1: $52050\times\tfrac{3}{6} = \$26025$ (monthly $\$2168.75$). Year 2: $52050\times\tfrac{2}{6} = \$17350$ (monthly $\$1445.83$).
+> Book value end of year 2 $= 61050 - (26025 + 17350) = \$17675$.
+
+### 5.3 Double-declining-balance method
+
+Rate is **twice** the linear rate, $\dfrac{2}{n}$, applied to the *current book value*. **Scrap value is ignored** in the calculation (depreciation could run forever).
+
+$$\text{depreciation}_\text{year} = \frac{2}{n}\times(\text{book value at start of year})$$
+
+> **Worked example 5.** Machine \$45150.75, life 5 → rate $= \tfrac{2}{5} = 40\%$.
+> Yr 1: $0.40\times 45150.75 = 18060.30$ → BV $27090.45$.
+> Yr 2: $0.40\times 27090.45 = 10836.18$ → BV $16254.27$.
+> Yr 3: $0.40\times 16254.27 = 6501.71$ → BV $\$9752.56$.
+> (The stated \$6000 scrap never entered the arithmetic — that's the point of the method.)
+
+### 5.4 Fixed-rate (constant-percentage) method
+
+Depreciate by a fixed rate $r\%$ of book value each year, but here $r$ is **solved from the data** (scrap not ignored):
+
+$$V = p\left(1 - \frac{r}{100}\right)^t$$
+
+Solve for the rate using cost, scrap, and life: $s = p\left(1 - \tfrac{r}{100}\right)^n$.
+
+> **Worked example 6.** Cost \$340, scrap \$75, life 5.
+> $75 = 340\left(1 - \tfrac{r}{100}\right)^5 \Rightarrow \left(1 - \tfrac{r}{100}\right)^5 = \tfrac{75}{340} \Rightarrow r \approx 26.1\%$.
+
+> **Worked example 7.** New cost \$5425.50, value \$1953.18 after 2 yr.
+> $1953.18 = 5425.50(1 - \tfrac{r}{100})^2 \Rightarrow 0.36 = (1 - \tfrac{r}{100})^2 \Rightarrow 0.6 = 1 - \tfrac{r}{100} \Rightarrow r = 40\%$.
+> Book value at 3 yr $= 5425.50(0.6)^3 = \$1171.91$.
+
+**Why this trips people up:** mixing up the four methods' treatment of scrap. **Linear** and **sum-of-years'-digits** use $(p - s)$. **Double-declining** *ignores* $s$ entirely. **Fixed-rate** uses $s$ only to *back out the rate*, then applies the rate to book value.
+
+---
+
