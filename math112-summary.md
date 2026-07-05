@@ -189,3 +189,61 @@ $$\frac{1}{a_{\overline{6}|2}} = 0.178526, \qquad a_{\overline{20}|1} = 18.04555
 
 ---
 
+## Chapter 4 — Bonds
+
+A bond is a long-term promissory note: the issuer pays periodic **coupon** interest and repays the redemption value at maturity.
+
+### 4.1–4.2 Terms
+
+| Symbol | Meaning |
+|---|---|
+| $f$ | **Face / par / maturity value** — printed on the bond (usually \$100 or \$1000). |
+| $A$ | **Redemption value** — what's actually repaid. "Redeemable at 105" means $A = 1.05f$. At par, $A = f$. |
+| $b$ | **Bond / coupon / contract rate** — sets the coupon: $d = b\% \times f$ per period. |
+| $r$ | **Yield / effective / investor's rate** — the market rate the buyer actually earns. Usually $\ne b$. |
+| $n$ | Number of interest periods to redemption. |
+| $V_B$ | **Purchase price** = present value of the bond. |
+
+### 4.3 Purchase price (premium and discount)
+
+$$V_B = p + I, \qquad p = AR^{-n}\ \text{(PV of redemption)}, \qquad I = d\,a_{\overline{n}|r}\ \text{(PV of coupons)}$$
+
+Algebraically equivalent, and usually faster:
+
+$$\boxed{V_B = A + (d - Ar\%)\,a_{\overline{n}|r}}$$
+
+**Premium / discount** (relative to redemption value):
+$$\text{Premium} = (d - Ar\%)\,a_{\overline{n}|r} = A(b\% - r\%)\,a_{\overline{n}|r} \quad (\text{when } b > r)$$
+$$\text{Discount} = (Ar\% - d)\,a_{\overline{n}|r} = A(r\% - b\%)\,a_{\overline{n}|r} \quad (\text{when } b < r)$$
+
+When face and redemption differ (not at par), use face value $f$ for the coupon: premium $= (fb - Ar)\%\,a_{\overline{n}|r}$; discount $= (Ar - fb)\%\,a_{\overline{n}|r}$.
+
+> **Worked example 1.** \$1000, 6% bond, redeemable in $3\tfrac12$ years, bought to yield 5% compounded semi-annually, interest paid semi-annually.
+> Per period: $r = 5/2 = 2.5\%$, $n = 3.5 \times 2 = 7$. Coupon $d = 1000 \times (6/2)\% = \$30$.
+>
+> **(i) At par** ($A = 1000$):
+> $p = 1000(1.025)^{-7} = 1000 \times 0.841265 = \$841.27$.
+> $I = 30\,a_{\overline{7}|2.5} = 30 \times 6.349391 = \$190.48$.
+> $V_B = 841.27 + 190.48 = \boxed{\$1031.75}$.
+> Check via the shortcut: $V_B = 1000 + (30 - 25)\times 6.349391 = 1000 + 31.75 = \$1031.75$. ✓ (a **premium**, since 6% > 5%.)
+>
+> **(ii) Redeemable at 105%** ($A = 1050$):
+> $p = 1050(1.025)^{-7} = \$883.33$; $I$ is unchanged $= \$190.48$.
+> $V_B = 883.33 + 190.48 = \boxed{\$1073.81}$.
+
+> **Worked example 2.** \$1000, 5% bond, redeemable in $3\tfrac12$ years, bought to yield **6%** semi-annually.
+> $r = 3\%$, $n = 7$, $d = \$25$. At par: $p = 1000(1.03)^{-7} = 1000\times 0.813092 = \$813.09$… → this comes out **below** \$1000 (a **discount**, since 5% < 6%).
+
+### 4.3.1 Premium amortization / discount accumulation
+
+Each period, the coupon differs from the yield the buyer "should" earn on the book value, so the book value drifts toward redemption value:
+
+- **Premium bond:** book value written **down** each period by (coupon $d$) $-$ (yield $\times$ book value).
+- **Discount bond:** book value written **up** each period by (yield $\times$ book value) $-$ (coupon $d$).
+
+A schedule (book's Tables 4.1 / 4.2) tracks coupon, yield interest, amortization/accumulation amount, and book value — ending exactly at $A$.
+
+**Why this trips people up:** using the **bond rate** where the **yield rate** belongs (or vice versa). The coupon $d$ always uses the *bond* rate; the discounting factors $R^{-n}$ and $a_{\overline{n}|r}$ always use the *yield* rate.
+
+---
+
