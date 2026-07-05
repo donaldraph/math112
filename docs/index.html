@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math 112 — Exam Simulator</title>
+  <meta name="description" content="Practice exam simulator for Math 112: Mathematics of Finance." />
+
+  <!-- KaTeX (via cdnjs) for rendering the math notation -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- Start screen -->
+    <section id="screen-start" class="screen">
+      <h1>Math&nbsp;112 — Exam Simulator</h1>
+      <p class="subtitle">Mathematics of Finance · practice under exam conditions</p>
+      <p class="lede">
+        A pool of <strong id="bank-size">0</strong> multiple-choice questions drawn from the whole
+        course: interest &amp; discounting, annuities, amortization &amp; sinking funds, bonds,
+        depreciation, and economics applications. Each question appears once per run;
+        get one wrong and you'll see a full worked explanation.
+      </p>
+      <button id="btn-start" class="btn btn-primary">Start exam</button>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="screen-quiz" class="screen hidden">
+      <div class="quiz-top">
+        <div class="progress-wrap">
+          <div class="progress-bar"><div id="progress-fill"></div></div>
+          <span id="progress-text" class="progress-text">Question 1</span>
+        </div>
+        <span id="chapter-tag" class="chapter-tag"></span>
+      </div>
+
+      <div id="question-text" class="question-text"></div>
+      <div id="choices" class="choices"></div>
+
+      <div id="feedback" class="feedback hidden"></div>
+
+      <div class="quiz-actions">
+        <button id="btn-next" class="btn btn-primary hidden">Next question</button>
+      </div>
+    </section>
+
+    <!-- Results screen -->
+    <section id="screen-results" class="screen hidden">
+      <h2>Results</h2>
+      <div id="score-headline" class="score-headline"></div>
+      <div id="tier-breakdown" class="tier-breakdown"></div>
+      <p id="tier-note" class="tier-note"></p>
+      <div class="results-actions">
+        <button id="btn-retry-missed" class="btn btn-primary">Retry missed only</button>
+        <button id="btn-restart" class="btn btn-secondary">New full exam</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">Math 112 · Mathematics of Finance — practice tool</footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
