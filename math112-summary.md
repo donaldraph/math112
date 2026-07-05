@@ -60,3 +60,60 @@ $$V_B = p + I = AR^{-n} + d\,a_{\overline{n}|r} \qquad\Longleftrightarrow\qquad 
 
 ---
 
+## Chapter 1 — Interest, Present Value, and Discounting
+
+### 1.1 Simple interest
+
+Interest accrues only on the original principal.
+
+$$i = \frac{prt}{100} \qquad A = p\left(1 + \frac{rt}{100}\right)$$
+
+$i$ = interest, $p$ = principal, $r$ = rate % per year, $t$ = time in **years**, $A$ = amount.
+
+**Time from days.** Two conventions — the exam loves to switch between them:
+
+$$t = \frac{\text{days}}{365}\ \text{(exact / actual)} \qquad t = \frac{\text{days}}{360}\ \text{(ordinary / banker's)}$$
+
+### 1.2 Discounting
+
+Finding what a future amount is worth **now**.
+
+**Sales / trade discount** (a price reduction, not time value):
+$$S = S_0\left(1 - \frac{r}{100}\right)$$
+
+**True discount** — interest on the *present value*, at simple interest:
+$$D = \frac{prt}{100}, \qquad p = \frac{A}{1 + rt/100}, \qquad D = A - p$$
+
+**Banker's discount** — interest charged on the *maturity value* $A$ (so it's always a bit larger than true discount):
+$$D = \frac{A\,d\,t}{100}, \qquad p = A\left(1 - \frac{dt}{100}\right), \qquad A = \frac{p}{1 - dt/100}$$
+Here $d$ is the **discount rate**. Relationship between a discount rate $d$ and interest rate $r$ (with $m = t/100$):
+$$d = \frac{r}{1 + rm}, \qquad r = \frac{d}{1 - dm}$$
+
+**Promissory note.** A note has a face value, a date, a term, and (sometimes) a stated interest rate. To find proceeds when it's discounted early: (1) find the **maturity value** $A$ (face + interest to maturity), (2) apply **banker's discount** over the time from the discount date to the maturity date.
+
+### 1.3 Compound interest
+
+Interest earns interest.
+
+$$A = pR^n = p\left(1 + \frac{r}{100}\right)^n, \qquad R = 1 + \frac{r}{100}$$
+$$\log\frac{A}{p} = n\log R \quad\text{(solve for } n\text{)}, \qquad i = A - p = p(R^n - 1)$$
+
+**Growing annual investment** — principal $p$ plus a fixed amount $d$ added at the end of each year:
+$$A = pR^n + d\left(\frac{R^n - 1}{R - 1}\right)$$
+
+**With withdrawals** of $d$ each period: $A = pR^n - d\,s_{\overline{n}|r}$.
+
+**Present value / discount value under compounding:**
+$$p = AR^{-n}, \qquad D = p(R^n - 1) = A(1 - R^{-n})$$
+
+**Nominal vs. effective (APR) rate.** A nominal rate compounded $m$ times has a larger *effective* annual rate:
+$$e = 100\left(R^n - 1\right) \quad\text{per year, with } R \text{ and } n \text{ the per-period figures}$$
+
+> **Worked example (rates).** 16% compounded quarterly → per period $r = 4\%$, $n = 4$.
+> Effective rate $= 100\big((1.04)^4 - 1\big) = 100(1.16986 - 1) \approx 17\%$.
+> So "16% quarterly" actually earns about **17% a year**.
+
+**Why this trips people up:** forgetting to convert the rate and periods to *per-conversion-period* before using $R^n$. "Per annum, compounded monthly" means divide the rate by 12 and multiply the years by 12 — every time.
+
+---
+
